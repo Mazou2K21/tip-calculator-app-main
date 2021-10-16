@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <img src="images/logo.svg" class="logo" alt="">
+  <div class="calculator">
+    <div class="calculator-setting">
+      <div class="bill">
+        <label for="bill">Bill</label>
+        <input type="number" min="0" class="bill-input" id="bill" placeholder="0" oninput="validity.valid||(value=value.replace(/-/, ''))">
+      </div>
+      <div class="tips">
+        <label for="tip" class="tips-label">Select Tip %</label>
+        <div class="tips-grid">
+          <!--Tip of 5% -->
+          <input type="checkbox" value="5" id="5" hidden class="tip-check">
+          <label for="5" class="button left-item">5%</label>
+          <!--Tip of 10% -->
+          <input type="checkbox" value="10" id="10" hidden class="tip-check">
+          <label for="10" class="button">10%</label>
+          <!--Tip of 15% -->
+          <input type="checkbox" value="15" id="15" hidden class="tip-check">
+          <label for="15" class="button">15%</label>
+          <!--Tip of 25% -->
+          <input type="checkbox" value="25" id="25" hidden class="tip-check">
+          <label for="25" class="button">25%</label>
+          <!--Tip of 50% -->
+          <input type="checkbox" value="50" id="50" hidden class="tip-check">
+          <label for="50" class="button left-item">50%</label>
+          <!--Custom Tip -->
+          <input type="number" min="0" id="custom" hidden class="tip-check custom" placeholder="custom" oninput="validity.valid||(value='');" >
+        </div>
+      </div>
+      <div class="people">
+        <label for="number-of-people">Number of People <span class="restrict-alert">Can't be zero</span></label>
+        <input min="0" class="people-input restrict" type="number" id="number-of-people" placeholder="0" oninput="validity.valid||(value='');">
+      </div>
+    </div>
+    <div class="calculator-result">
+      <div class="contents">
+        <div class="tip-amount">
+          <div class="tip-amount-text">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <div class="tip-amount-nums">
+            <p>$0.00</p>
+          </div>
+        </div>
+        <div class="result-total">
+          <div class="total-text">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <div class="total-nums"><p>$0.00</p></div>
+        </div>
+      </div>
+      <button class="reset">Reset</button>
+    </div>
+  </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://twitter.com/BoukikazM" target="_blank">Boukikaz Mouatez Billeh</a>.
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
